@@ -1,0 +1,515 @@
+{
+	"info": {
+		"_postman_id": "51647356-a044-4b49-8ef6-cd236382a156",
+		"name": "User Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/user/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/user/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All User Profile",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/user/1/profile"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User Profile",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/user/1/profile/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Default Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/user/1/profile/default"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Demo Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/user/demo-profile"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Profile List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/user/1/profile"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/user/1/profile/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Default Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/user/1/profile/default"
+			},
+			"response": []
+		},
+		{
+			"name": "Set User Default Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{base_url}}/user/1/profile/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Vimal\",\r\n    \"lastName\":\"Bhuriya\",\r\n    \"username\":\"vimalb\",\r\n    \"contactNo\":\"98653214\",\r\n    \"password\":\"vimalb\",\r\n    \"age\":32\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"deskHeight\": 0,\r\n        \"fan\": false,\r\n        \"fanSpeed\": 0,\r\n        \"heater\": false,\r\n        \"heaterLevel\": 0,\r\n        \"taskLight\": false,\r\n        \"taskLightLevel\": 0,\r\n        \"profileName\": \"dark mode\",\r\n        \"defaultProfile\": false,\r\n        \"adminDemo\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/user/1/profile"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Demo Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"deskHeight\": 0,\r\n        \"fan\": false,\r\n        \"fanSpeed\": 0,\r\n        \"heater\": false,\r\n        \"heaterLevel\": 0,\r\n        \"taskLight\": false,\r\n        \"taskLightLevel\": 0,\r\n        \"profileName\": \"demo mode\",\r\n        \"defaultProfile\": false,\r\n        \"adminDemo\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/user/profile/demo"
+			},
+			"response": []
+		},
+		{
+			"name": "Make User Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{base_url}}/user/98/makeAdmin"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User as Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{base_url}}/user/98/removeAdmin"
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oldPassword",
+							"value": "architp",
+							"type": "text"
+						},
+						{
+							"key": "newPassword",
+							"value": "architp",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/user/change/password/100"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "vimalb",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "vimalb",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Archit\",\r\n     \"createDate\": \"2020-03-16T07:17:29.362+0000\",\r\n    \"createdBy\": \"anonymousUser\",\r\n     \"lastDate\": \"2020-03-16T07:17:29.362+0000\",\r\n    \"lastModifiedBy\": \"anonymousUser\",\r\n    \"lastName\":\"Patel\",\r\n    \"username\":\"architp\",\r\n    \"contactNo\":\"98653214\",\r\n    \"rfId\":\"123456789\",\r\n    \"fingerPrintId\":\"123456789\",\r\n    \"password\":\"architp\",\r\n    \"age\":26,\r\n    \"id\":100,\r\n    \"userProfile\" : [\r\n        {\r\n            \"deskHeight\": 1,\r\n            \"fan\": true,\r\n            \"fanSpeed\": 4,\r\n            \"heater\": true,\r\n            \"heaterLevel\": 3,\r\n            \"taskLight\": true,\r\n            \"taskLightLevel\": 2,\r\n            \"profileName\": \"demo\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/user/100"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By RFID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/user/rfid/123456789"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Finger Print Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/user/finger-print/123456789"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By UserName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"{",
+							"    userName:\"Prexj\"",
+							"}"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"raw": "{{base_url}}/user/username?userName=Prexj",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"username"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "Prexj",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Table Properties",
+			"request": {
+				"url": "{{base_url}}/tableProps",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"table5\",\r\n    \"no\":5\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Table properties",
+			"request": {
+				"url": "{{base_url}}/tableProps/66",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"createDate\": \"2020-12-25T07:17:29.362+0000\",\r\n    \"createdBy\": \"anonymousUser\",\r\n     \"lastDate\": \"2020-12-25T07:17:29.362+0000\",\r\n    \"lastModifiedBy\": \"anonymousUser\",\r\n    \"name\":\"table4\",\r\n    \"no\":4,\r\n    \"id\":1\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Table properties",
+			"request": {
+				"url": "{{base_url}}/tableProps/66",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Table Configuration",
+			"request": {
+				"url": "{{base_url}}/tableProps/1/tableConfig",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Table Configuration",
+			"request": {
+				"url": "{{base_url}}/tableProps/34/tableConfig/35",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceType\":\"Pratik3\",\r\n    \"deviceNo\":\"Joshi3\",\r\n    \"deviceSequence\":1,\r\n    \"socketNo\":\"1234567\",\r\n    \"power\":false,\r\n    \"level\":\"level3\",\r\n    \"status\":\"Deallocated\"\r\n    \r\n    \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Table Configuration",
+			"request": {
+				"url": "{{base_url}}/tableProps/34/tableConfig",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceType\":\"Pratik1\",\r\n    \"deviceNo\":\"Joshi1\",\r\n    \"deviceSequence\":2,\r\n    \"socketNo\":\"1234561\",\r\n    \"power\":true,\r\n    \"level\":\"level2\",\r\n    \"status\":\"Allocated\"\r\n    \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add User Profile New Parameters",
+			"request": {
+				"url": "{{base_url}}/user/35/profile",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceType\":\"fan\",\r\n    \"deviceSequence\":3,\r\n    \"power\":true,\r\n    \"level\":\"21\"\r\n    \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User Profile",
+			"request": {
+				"url": "{{base_url}}/user/35/profile/45",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceType\":\"fan3\",\r\n    \"deviceSequence\":4,\r\n    \"power\":true,\r\n    \"level\":\"30\"\r\n    \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User New ",
+			"request": {
+				"url": "{{base_url}}/user/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Archit\",\r\n     \"createDate\": \"2020-03-16T07:17:29.362+0000\",\r\n    \"createdBy\": \"anonymousUser\",\r\n     \"lastDate\": \"2020-03-16T07:17:29.362+0000\",\r\n    \"lastModifiedBy\": \"anonymousUser\",\r\n    \"lastName\":\"Patel\",\r\n    \"username\":\"architp\",\r\n    \"contactNo\":\"98653214\",\r\n    \"rfId\":\"123456789\",\r\n    \"fingerPrintId\":\"123456789\",\r\n    \"password\":\"architp\",\r\n    \"age\":26,\r\n    \"id\":1\r\n   \r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4ee3dffc-f4d9-4816-8fec-04f5fca8ddb6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "add1d14c-2260-4791-a540-9976d757797f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "fcbdac64-edc3-4910-be57-d079c99fb061",
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
